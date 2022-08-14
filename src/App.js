@@ -265,7 +265,6 @@ function App() {
           <Box
             w="100%"
             display="flex"
-            position="absolute"
             flexDir="column"
             bottom="0"
             mt="0"
