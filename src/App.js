@@ -268,7 +268,7 @@ function App() {
             flexDir="column"
             bottom="0"
             mt="0"
-            h={{ base: "24%", md: "27%" }}
+            h={{ base: "24%", md: "26.5%" }}
             bg="blackAlpha.500"
             id="daily"
           >

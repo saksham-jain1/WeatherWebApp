@@ -26,6 +26,9 @@ const DailyData = ({data,degree}) => {
       flex="0 0 auto"
       borderRadius="xl"
       style={{ boxShadow: "0 0 5px #fff" }}
+      display="flex"
+      flexDir="column"
+      justifyContent="center"
     >
       <Text textAlign="center" fontSize="1rem" p=".5rem">
         <Avatar size="sm" src={data.day.condition.icon} />

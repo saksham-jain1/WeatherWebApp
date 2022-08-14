@@ -14,6 +14,7 @@ const HourlyData = ({ data, degree }) => {
       borderRadius="xl"
       display="flex"
       flexDir="column"
+      justifyContent="center"
       alignItems="center"
       style={{ boxShadow: "0 0 5px #fff" }}
     >
