@@ -1,5 +1,5 @@
 import { Box, Heading, Image, Input, Select, Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import sunny from "./Backgrounds/sunny.jpg";
 import clear from "./Backgrounds/clear.jpg";
 import cloudsDay from "./Backgrounds/cloudsDay.jpg";
@@ -179,6 +179,9 @@ function App() {
         <Select
           w="100px"
           mx="1rem"
+          color="black"
+          bg="whiteAlpha.400"
+          fontWeight="bold"
           onChange={(e) => {
             setDegree(!degree);
           }}
@@ -258,7 +261,13 @@ function App() {
             </Heading>
             <Box w="100%" display="flex" h="100%" overflowX="auto">
               {Data?.forecast?.forecastday[0]?.hour?.map((curr, id) => {
-                return <HourlyData key={id} degree={degree} data={curr} />;
+                return (
+                  <HourlyData
+                    key={id}
+                    degree={degree}
+                    data={curr}
+                  />
+                );
               })}
             </Box>
           </Box>

@@ -1,9 +1,13 @@
 import { Avatar, Box, Text } from "@chakra-ui/react";
 import React from "react";
 
-const HourlyData = ({ data, degree }) => {
+const HourlyData = ({ data, degree, rref }) => {
   const date = new Date();
   const hours = date.getHours();
+  document.getElementById(hours)?.scrollIntoView({
+    inline: "center",
+    behavior: "smooth",
+  });
   return (
     <Box
       w="100px"
@@ -17,6 +21,7 @@ const HourlyData = ({ data, degree }) => {
       justifyContent="center"
       alignItems="center"
       style={{ boxShadow: "0 0 5px #fff" }}
+      id={data.time.slice(11, 13)}
     >
       <Text textAlign="center" fontSize="1rem">
         {hours == data.time.slice(11, 13)
