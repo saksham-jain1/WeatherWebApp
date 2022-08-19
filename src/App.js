@@ -141,6 +141,11 @@ function App() {
           ) {
             setBg(thunderstrom);
           }
+          const date = new Date();
+          document.getElementById(date.getHours())?.scrollIntoView({
+            inline: "center",
+            behavior: "smooth",
+          });
         })
         .catch((err) => {
           setData("");
