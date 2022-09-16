@@ -24,9 +24,8 @@ const HourlyData = ({ data, degree }) => {
       flexDir="column"
       justifyContent="center"
       alignItems="center"
-      style={{ boxShadow: "0 0 5px #fff" }}
+      style={{ boxShadow: "0 0 5px #fff"}}
       id={data.time.slice(11, 13)}
-      className="innerBox"
     >
       <Text h="100%" textAlign="center" fontSize="1rem">
         {hours == data.time.slice(11, 13)
@@ -34,10 +33,9 @@ const HourlyData = ({ data, degree }) => {
           : `${data.time.slice(11, 13) % 12 || 12}${data.time.slice(13, 16)} ${
               data.time.slice(11, 13) >= 12 ? "PM" : "AM"
             }`}
-      </Text>
-      <Text>{data.gust_kph}&nbsp;k/h</Text>
-      <Avatar size="sm" src={data.condition.icon} />
-      <Text textAlign="center" fontSize="1rem">
+        <br />
+        {data.gust_kph}&nbsp;k/h
+      <Avatar size="sm" src={data.condition.icon} /><hr />
         {degree ? `${data.temp_c} ℃` : `${data.temp_f} ℉`}
       </Text>
     </Box>

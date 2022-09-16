@@ -267,7 +267,7 @@ function App() {
               <Heading w="100%" textAlign="center">
                 Hourly
               </Heading>
-              <Box display="flex" h="100%" overflowX="auto" className="box" width="100%">
+              <Box display="flex" h="100%" overflowX="auto" width="100%">
                 {Data?.forecast?.forecastday[0]?.hour?.map((curr, id) => {
                   return <HourlyData key={id} degree={degree} data={curr} />;
                 })}
